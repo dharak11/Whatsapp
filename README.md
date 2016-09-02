@@ -2,11 +2,7 @@
 
 ## Usage
 
-Since Meteor v1.4 you can use one command to create a working Angular2 app based on this boilerplate:
-
-```
-meteor create --example angular2-boilerplate
-```
+User can Sign up and Login for Chat App,Users Can Chat.
 
 ## Boilerplate Contents
 
@@ -53,13 +49,3 @@ All other server files should be located under `/server/imports`.
 #### Common
 
 Example for common files in our app, is the MongoDB collection we create - it located under `/both/demo-collection.ts` and it can be imported from both client and server code.
-
-## Testing
-
-The testing environment in this boilerplate based on [Meteor recommendation](https://guide.meteor.com/testing.html), and uses Mocha as testing framework along with Chai for assertion.
-
-There is a main test file that initialize Angular 2 tests library, it located under `/client/init.test.ts`.
-
-All other test files are located near the component/service it tests, with the `.test.ts` extension.
-
-The `DemoComponent` contains example for Angular 2 tests for Component, and in the server side there is an example for testing Meteor collections and stub data.
