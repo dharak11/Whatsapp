@@ -49,3 +49,12 @@ All other server files should be located under `/server/imports`.
 #### Common
 
 Example for common files in our app, is the MongoDB collection we create - it located under `/both/demo-collection.ts` and it can be imported from both client and server code.
+
+#### Run
+
+Step1: Clone Repo
+-git clone https://github.com/dharak11/Whatsapp.git
+-cd ChatApplication
+-meteior npm install
+-meteor
+http://localhost:3000
