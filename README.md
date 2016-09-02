@@ -1,4 +1,4 @@
-# Angular2-Meteor-Base Tutorial
+# Angular2-Meteor-Base ChatApplication
 
 ## Usage
 
