@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="row">
+         <div class="form_bg">
+            <center><h2  ><u> Login </u></h2></center>
+            <br/>
+            <form [formGroup]="loginForm" id="login" class="login" (ngSubmit)="loginUser()">
+            <div class="form-group">
+                <label for="emailAddress">Email Address</label>
+                <!--<input type="email" name="emailAddress" [(ngModel)] = "login.email"  class="form-control" placeholder="Email Address">-->
+                <input type="email" formControlName="emailAddress" class="form-control" placeholder="Email Address" required>
+            </div>
+            <br/>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <!--<input type="password" name="password" class="form-control" [(ngModel)]="login.password" placeholder="Password">-->
+                <input type="password" formControlName="password" class="form-control" placeholder="Password" required>
+            </div>  
+            <br/> 
+            <br/> 
+
+            <div class="form-group">
+                <input type="submit" class="btn btn-success" value="Login" >
+                <button type="button" class="btn btn-secondary" (click)="cancelUser()" >Cancel</button>
+            </div>   
+            </form>
+            <a [routerLink]="['/signup']" >Sign Up</a>
+        </div>
+    </div>
+</div>
+
+

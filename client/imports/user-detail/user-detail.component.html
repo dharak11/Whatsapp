@@ -1,0 +1,31 @@
+
+<div class="container">
+    <div class="row">
+         <div class="form_bg">
+            <logout  class="pull-right"></logout><br/> 
+            <center><h2><u> {{user}} </u></h2></center>
+            <div *ngFor="let chat of chats">
+                <div *ngIf="currentUserId == chat.chatBetween.from  && (notToShow ==  chat.chatBetween.from || notToShow == chat.chatBetween.to)">
+                    <b>{{currentUser}} : </b>   {{chat.messages}}
+                    <br/> {{chat.date | date: 'shortTime'}}
+                </div>          
+                <div *ngIf="currentUserId == chat.chatBetween.to && (notToShow == chat.chatBetween.to || notToShow ==  chat.chatBetween.from) && chat.read==true">
+                    <b>{{user}} : </b>   {{chat.messages}}
+                    <br/> {{chat.date | date: 'shortTime'}}
+                </div>
+            </div>
+            <br/>
+            <form [formGroup]="messagesendform" id="send"  (ngSubmit)="sendMessage()">
+                <div>
+                    <label for="messages">Message</label>
+                    <input type="text" formControlName="messages" [(ngModel)]="message" required class="form-control" placeholder=" Message">
+                </div> 
+                <br/> 
+                <div>
+                    <input type="submit" class="btn btn-success" value="Send">
+                    <a class="btn btn-secondary" [routerLink]="['/users']"> Back </a>
+                </div>   
+            </form>
+         </div>
+    </div>
+</div>

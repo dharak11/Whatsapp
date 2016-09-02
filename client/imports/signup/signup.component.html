@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="row">
+         <div class="form_bg">
+  
+                <center><h2><u> Sign Up </u></h2> </center>
+                <br/>
+                <form [formGroup]="signupForm" id="signup" class="signup" (ngSubmit)="registerUser()">
+                    <div class="form-group">
+                    <label for="userName">User Name</label>
+                        <!--<input type="text" formControlName="userName" name="userName" [(ngModel)] = "signupUser.userName"  class="form-control" placeholder="User Name">-->
+                        <input type="text" formControlName="userName" class="form-control" required placeholder="User Name">
+                    </div>
+                    <br/>
+                    <div class="form-group">
+                        <label for="emailAddress">Email Address</label>
+                        <!--<input type="email" formControlName="emailAddress" name="emailAddress" [(ngModel)] = "signupUser.email"  class="form-control" placeholder="Email Address">-->
+                        <input type="email" formControlName="emailAddress" class="form-control" required placeholder="Email Address">
+                    </div>
+                    <br/>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <!--<input type="password" formControlName="password" name="password" class="form-control" [(ngModel)]="signupUser.password" placeholder="Password">-->
+                        <input type="password" formControlName="password" class="form-control" placeholder="Password" required>
+                    </div>  
+                    <br/> 
+                    <div class="form-group">
+                        <input type="submit" class="btn btn-success" value="Sign Up">
+                        <button type="button" class="btn btn-secondary" (click)="cancelUser()" >Cancel</button>
+                    </div>   
+                </form>
+                <a [routerLink]="['']"> Back </a>
+         </div>
+    </div>
+</div>
+  
+  
+
+  

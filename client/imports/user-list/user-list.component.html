@@ -1,0 +1,35 @@
+
+<div class="container">
+    <div class="row">
+         <div class="form_bg">
+                <strong class="pull-left">{{currentUser}}</strong>
+                <logout  class="pull-right"></logout><br/> 
+                <br/>
+                <center>
+                     
+                <h2><u> User List </u></h2>
+              
+                <table class="table table-hover">   
+                    <tr *ngFor="let user of users">
+                         
+                        <td *ngIf="user.username != currentUser">
+                            <center>  <a [routerLink]="['/userdetail', user._id]">{{user.username}}</a>
+                            <span *ngFor="let message of temp">
+                                
+                                <span  class="tag tag-default tag-pill pull-xs-right" *ngIf="user._id == message.id">
+                                    {{message.count}}
+                                </span>
+                            </span>
+
+                            </center>
+                        </td>
+                       
+                    </tr>
+                   
+                </table>
+                </center>
+         </div>
+    </div>
+</div>
+
+
